@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body { 
+            background-image: url("images/amsterdam.jpg"); 
+            background-repeat: repeat; 
+        }
+        section {
+            width: 280px;
+            background-color: wheat;
+            padding: 20px;
+            padding-left: 30px;
+            margin: 20px;
+            font-family: Garamond, serif;
+            font-size: 16px;
+            color: brown;
+            margin-left: 40%; 
+            margin-right: 50%;
+        }
+        section > input {
+            font-family: Garamond, serif;
+            font-size: 16px;
+            color: brown;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Reservation Form</title>
+</head>
+
+<body>
+    <section>
+        <h1>Travel Reservation Form</h1><hr>
+        <p><b><h3>* denotes mandatory</h3></b></p><br>
+        <label for="name">Full Name *:</label><br>
+        <input id="name" type="text" name="name" placeholder="FirstName LastName" required/><br><br>
+
+        <label for="email">Email Address *:</label><br>
+        <input id="email" type="text" name="email" placeholder="EMAIL_ADDRESS" required/><br><br>
+
+        <label for="package">Select Tour Package *:</label><br>
+        <select id="package" name="package" style="color: brown; font-family: Garamond, serif; font-size: 16px;" required>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Paris">Paris</option>
+            <option value="Rome">Rome</option>
+        </select><br><br>
+
+        <label for="arrival">Arrival Date *:</label><br>
+        <input type="date" id="arrival" name="arrival" placeholder="mm/dd/yyyy" required><br><br>
+
+        <label for="num">Number of Persons *:</label><br>
+        <input id="num" type="number" name="num" placeholder="UNKNOWN_TYPE" required /><br><br>
+
+        <form>
+            <div>What would you like to avail? *:</div>
+            <label for="board">Boarding</label>
+            <input id="board" name="avail" type="checkbox" value="board">
+            <br>
+            <label for="food">Food</label>
+            <input id="food" name="avail" type="checkbox" value="food">
+            <br>
+            <label for="sightseeing">Sightseeing</label>
+            <input id="sightseeing" name="avail" type="checkbox" value="sightseeing">
+        </form>
+        
+        <br><label for="discount">Discount Coupon Code :</label><br>
+        <input type="number" id="discount" name="discount" placeholder="UNKNOWN_TYPE" required><br><br>
+
+        <form>
+            <div>Terms and Conditions *</div>
+            <input type="radio" id="agree" name="answer" value="I agree" checked>
+            <label for="agree">I agree</label>
+            <input type="radio" id="disagree" name="answer" value="I disagree">
+            <label for="disagree">I disagree</label>
+        </form>
+
+        <br><form action="travel_reservation.html" method="GET">
+        <input style="color: brown; font-family: Garamond, serif; font-size: 16px; font-weight: bold;" type="submit" value="Complete Reservation" />
+    </section>
+</body>
+</html>
